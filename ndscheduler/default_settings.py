@@ -81,11 +81,11 @@ DATABASE_TABLENAMES = {
 #
 DATABASE_CLASS = 'ndscheduler.corescheduler.datastore.providers.mysql.DatastoreMySQL'
 DATABASE_CONFIG_DICT = {
-     'user': 'root',
-     'password': '',
-     'hostname': 'localhost',
-     'port': 3306,
-     'database': 'scheduler'
+    'user': 'admin',
+    'password': '1q2w3e4r5t',
+    'hostname': 'ffdbinstance.cke7o0pnrtg8.us-west-2.rds.amazonaws.com',
+    'port': 3306,
+    'database': 'feedschedule'
 }
 
 # ndschedule is based on apscheduler. Here we can customize the apscheduler's main scheduler class

@@ -44,3 +44,16 @@ simple:
 	$(SOURCE_VENV) && \
 		NDSCHEDULER_SETTINGS_MODULE=simple_scheduler.settings PYTHONPATH=.:$(PYTHONPATH) \
 		$(PYTHON) simple_scheduler/scheduler.py
+
+
+start:
+    if [ ! -d ".venv" ]; then make install; fi
+
+    # Install dependencies
+    $(PIP) install -r simple_scheduler/requirements.txt;
+
+    # Uninstall ndscheduler, so that simple scheduler can pick up non-package code
+    $(SOURCE_VENV) && $(PIP) uninstall -y ndscheduler || true
+    $(SOURCE_VENV) && \
+            NDSCHEDULER_SETTINGS_MODULE=ndscheduler.default_settings PYTHONPATH=.:$(PYTHONPATH) \
+            $(PYTHON) simple_scheduler/scheduler.py
