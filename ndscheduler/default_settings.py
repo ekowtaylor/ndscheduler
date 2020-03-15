@@ -62,12 +62,12 @@ DATABASE_TABLENAMES = {
 #
 # DATABASE_CLASS = 'ndscheduler.corescheduler.datastore.providers.sqlite.DatastoreSqlite'
 # DATABASE_CONFIG_DICT = {
-#    'file_path': 'datastore.db'
+#     'file_path': 'datastore.db'
 # }
 
 # Postgres
 #
-# DATABASE_CLASS = 'ndscheduler.corescheduler.datastore.providers.postgresql.DatastorePostgresql'
+# DATABASE_CLASS = 'ndscheduler.corescheduler.datastore.providers.postgres.DatastorePostgres'
 # DATABASE_CONFIG_DICT = {
 #     'user': 'username',
 #     'password': '',
@@ -79,14 +79,14 @@ DATABASE_TABLENAMES = {
 
 # MySQL
 #
-DATABASE_CLASS = 'ndscheduler.corescheduler.datastore.providers.mysql.DatastoreMysql'
+DATABASE_CLASS = 'ndscheduler.corescheduler.datastore.providers.mysql.DatastoreMySQL'
 DATABASE_CONFIG_DICT = {
      'user': 'root',
      'password': '',
      'hostname': 'localhost',
      'port': 3306,
      'database': 'scheduler'
- }
+}
 
 # ndschedule is based on apscheduler. Here we can customize the apscheduler's main scheduler class
 # Please see ndscheduler/core/scheduler/base.py
